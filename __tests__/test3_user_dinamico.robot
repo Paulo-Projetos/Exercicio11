@@ -16,7 +16,6 @@ Post user
     ${response_body}    Set Variable    ${response.json()}
     Log To Console    ${response_body}
 
-# Efetuando test de conexão com o git hub
     Status Should Be    200
     Should Be Equal    ${response_body}[code]            ${{int(200)}}
     Should Be Equal    ${response_body}[type]            unknown
