@@ -21,7 +21,6 @@ Post user
     Should Be Equal    ${response_body}[type]            unknown
     Should Be Equal    ${response_body}[message]         ${id}
 
-
 Delete user
     ${response}    DELETE    ${{$url + '/' + $username}}
     ${response_body}    Set Variable    ${response.json()}
